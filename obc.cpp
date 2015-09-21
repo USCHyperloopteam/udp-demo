@@ -4,12 +4,12 @@
 
 // the actual DHCP initialization, we’ll also need to put in the SSID and
 // authentication key
-init (const char *ip, const char *mask, const char *gateway)
+init (const char *ip, const char *mask, const char *gateway);
 
 bool is_ip_of_GCS_known = false; // plus other variables
 bool continue_program = true;
 
-while (continue_program == true) {
+while (continue_program) {
     if(is_ip_of_GCS_known) {
         // run Establishcomms.eth1 //object that 
         // run Read_eth0.sh //run script or embedded code that reads data from eth0 (our MCUs)and organizes that data as you need
